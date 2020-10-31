@@ -119,8 +119,8 @@ module.exports = class Renderer {
     return '<em>' + text + '</em>';
   }
 
-  codespan(text) {
-    return '<code>' + text + '</code>';
+  codespan(text, tag) {
+    return `<code${tag ? ` tag="${tag}"` : ''}>${text}</code>`;
   }
 
   br() {

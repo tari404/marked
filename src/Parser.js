@@ -232,7 +232,7 @@ module.exports = class Parser {
           break;
         }
         case 'codespan': {
-          out += renderer.codespan(token.text);
+          out += renderer.codespan(token.text, token.tag);
           break;
         }
         case 'br': {

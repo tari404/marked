@@ -546,10 +546,12 @@ module.exports = class Tokenizer {
         text = text.substring(1, text.length - 1);
       }
       text = escape(text, true);
+      const tag = cap[3];
       return {
         type: 'codespan',
         raw: cap[0],
-        text
+        text,
+        tag: tag ? tag.substring(1, tag.length - 1) : ''
       };
     }
   }

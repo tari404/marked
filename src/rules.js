@@ -181,7 +181,7 @@ const inline = {
     endAst: /[^punctuation\s]\*(?!\*)|[punctuation]\*(?!\*)(?:(?=[punctuation_\s]|$))/, // last char can't be punct, or final * must also be followed by punct (or endline)
     endUnd: /[^\s]_(?!_)(?:(?=[punctuation*\s])|$)/ // last char can't be a space, and final _ must preceed punct or \s (or endline)
   },
-  code: /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/,
+  code: /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)(\(\w+\))?/,
   br: /^( {2,}|\\)\n(?!\s*$)/,
   del: noopTest,
   text: /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*]|\b_|$)|[^ ](?= {2,}\n)))/,
